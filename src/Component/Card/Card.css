@@ -1,0 +1,30 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+    width: 159px;
+    height: 205px;
+    background-color: var(--css-white);
+    color: var(--css-black);
+    border-radius: 10px
+}
+.card-img img{
+    height: 80%;
+    width:100%
+}
+.innercard{
+    display: inline-flex;
+    padding: 4px 8px;
+    align-items: center;
+}
+.title{
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    margin: 3px 0 10px 0;
+    width: 159px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
