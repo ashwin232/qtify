@@ -1,0 +1,33 @@
+.swiper-slide{
+    color: white;
+}
+
+.arrow{
+ position: absolute;
+ width: 24px;
+ height: 24px;
+ z-index: 1;
+ top: 50%;
+ border-radius: 50%;
+ overflow: hidden;
+ transform: translateY(-50%);
+}
+
+
+arrow img{
+    height: 100%;
+    width: 100%;
+}
+
+.arrow-left{
+    left: -12px;
+}
+
+.arrow-right{
+    right: -12px;
+}
+
+.carousel-container{
+    border: 2px solid red;
+    position: relative;
+}

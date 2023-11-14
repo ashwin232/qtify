@@ -1,4 +1,4 @@
-import styles from './hero.css';
+import  './hero.css';
 import heroImage from '../../Assets/vibrating-headphone.svg';
 
 const HeroSection=()=>{
