@@ -9,7 +9,8 @@ import 'swiper/css/navigation';
 import './carousel.css'
 
 
-export default ({data})=>{
+// eslint-disable-next-line import/no-anonymous-default-export
+export default ({data,navId})=>{
     return <div className='carousel-container'>
        <Swiper
         modules={[Virtual, Navigation, Pagination]}
@@ -21,7 +22,7 @@ export default ({data})=>{
           //type: 'fraction',
         //}}
         //navigation={true}
-        navigation={{nextEl:".arrow-left",prevEl:".arrow-right"}}
+        navigation={{nextEl:`.arrow-left-${navId}`,prevEl:`.arrow-right-${navId}`}}
         virtual
       >
         {data.map(cardData=><SwiperSlide key={cardData.id}><Card
@@ -30,8 +31,8 @@ export default ({data})=>{
           title={cardData.title}
           follows={cardData.follows}/></SwiperSlide>)}
              </Swiper>
-          <div className='arrow-left arrow'><img src='/leftIcon.png'/></div>
-           <div className='arrow-right arrow'><img src='/rightIcon.png'/></div>
+          <div className={`arrow-left-${navId} arrow-left arrow`}><img src='/leftIcon.png' alt='left'/></div>
+          <div className={`arrow-right-${navId} arrow-right arrow`}><img src='/rightIcon.png' alt='right'/></div>
      </div>
    
     

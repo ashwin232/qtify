@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Carousel from '../Carousel'
 
 
-export default({title,data})=>{
+export default({navId,title,data})=>{
       const [isCollapse,setIsCollapse]= useState(false)
 
     return <div className='section'>
@@ -15,7 +15,7 @@ export default({title,data})=>{
           setIsCollapse(!isCollapse)
         }}>{isCollapse ?'Show All':'collapse'}</h1>
       </div>
-     {isCollapse?<Carousel data={data}/> : <div className='card-container'>
+     {isCollapse?<Carousel data={data} navId={navId}/> : <div className='card-container'>
         {data.map(cardData=><Card
            key={cardData.id}
           imgSrc={cardData.image}

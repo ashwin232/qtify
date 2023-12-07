@@ -1,7 +1,10 @@
+import Menu from '../Menu';
 import { ReactComponent as SearchIcon } from './SearchIcon.svg';
 
 export default ()=>{
-    return <form style={{
+    return <div style={{
+        position:'relative'
+    }}><form style={{
         display:'flex',
         minWidth:'570px'
     }}>
@@ -23,4 +26,6 @@ export default ()=>{
             <SearchIcon />
         </button>
     </form>
+    <Menu data={[1,2,3]}/>
+    </div>
 }
